@@ -6,7 +6,7 @@ public class Comment {
 	private ArrayList<Comment> Collection = new ArrayList<Comment>();
 	
 	public Comment(User u, String cmt, ArrayList<Comment> clt) {
-		this.user = u;
+		user = u;
 		this.cmt = cmt;
 		Collection = clt;
 	}
