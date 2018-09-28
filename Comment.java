@@ -8,12 +8,15 @@ public class Comment {
 	public Comment(User user, String text, ArrayList<Comment> thread) {
 		
 		this.user = user;
-		this.cmt = cmt;
-		Collection = clt;
+		this.text = text;
+		this.thread = thread;
 	}
 	
 	public void addReply(Comment com) {
-		this.Collection.add(com);
+		//this.Collection.add(com);
 	}
 	
+	public void showReview(Content content) {
+		// print out reviews of that content.
+	}
 }
