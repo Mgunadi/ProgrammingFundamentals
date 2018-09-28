@@ -1,14 +1,13 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-public class Content {
+abstract public class Content {
 	
-	private String ID, appName, reviews;
+	protected String ID, appName, reviews;
 	private int downloads;
-	private double price;
+	protected double price;
 	private ArrayList<Comment> Reviews = new ArrayList<Comment>();
 	// private HashMap<String, ArrayList<String>> Reviews = new HashMap<String, ArrayList<String>>();
 
-	
 	public Content(String ID, String appName, String reviews, int downloads, double price) {
 		this.ID = ID;
 		this.appName = appName;
@@ -16,6 +15,7 @@ public class Content {
 		this.downloads = downloads;
 		this.price = price;
 	}
+	
 	public void addReview(Comment comment) {
 		Reviews.add(comment);
 		
@@ -27,10 +27,8 @@ public class Content {
 		}
 	}
 	
-	public double getPrice() {
-		return price;
-	}
+	public abstract double getPrice();
 
+	public abstract String getID();
+	
 }
-
-//new comment by Verity

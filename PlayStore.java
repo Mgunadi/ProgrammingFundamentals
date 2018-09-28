@@ -1,36 +1,37 @@
 import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.ArrayList;
+import java.lang.Object;
 
 public class PlayStore {
 	
-	// whatever variables you need here.
-	// They must all be marked as private
-	
-	// Declare a private variable (array or similar) to store your Content objects here
-	
-	// Declare a private variable (array or similar) to store your User objects here
-	
+	//private static ReadingList = 
+	private String id;
+	private HashMap<String, Content> Library = new HashMap<String, Content>();
+	private ArrayList<User> UserList = new ArrayList<User>();
 	
 	public PlayStore() {
-		// any code you need here
 	}
 	
 	public void add(String id, Content content) {
-		// add the content into your content list
+		Library.put(id, content);
 	}
 	
 	public void add(User user) {
-		// add the user to your list of users
+		UserList.add(user);
 	}
 	
-	
 	public void showReadingOfGenre(String genre) {
-		// add your code here
+		//yesReading =
+		System.out.println(genre + "is a title in the category:" + Library.);
 	}
 	
 	
 	public void showContent() {
-		// add your code here
+		System.out.println("This collection contains: " + Library.entrySet());
+		for (int i = 0 ; i <Library.size(); i++) {
+			System.out.println(Library.get(i).getClass()); 
+		}
 	}
 	
 }

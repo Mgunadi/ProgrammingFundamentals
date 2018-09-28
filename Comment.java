@@ -2,9 +2,13 @@ import java.util.ArrayList;
 public class Comment {
 
 	private User user;
-	//private String text;
 	private ArrayList<String> thread = new ArrayList<String>();
 	
+	public Comment(User user, String comment) {
+		this.user = user;
+		thread.add(comment);
+		
+	}
 	public Comment(User user, ArrayList<String> thread) {
 		
 		this.user = user;
