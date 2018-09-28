@@ -7,6 +7,7 @@ public class User {
 	
 	private boolean isPremium = false; 
 	private ArrayList<Content>Library = new ArrayList<Content>();
+	boolean hasEnough;
 	
 	public User(String ID, String name, String phone, double balance, OS os) {
 		UserID = ID;
@@ -17,7 +18,6 @@ public class User {
 	}
 	
 	public boolean enoughBalance(double amount) {
-		boolean hasEnough;
 		if ((balance -= amount) > 0) {
 			System.out.println("Congratulations you have enough money!!!");
 			hasEnough = true;
