@@ -24,11 +24,16 @@ public class Comment {
 	public String getUser() {
 		
 	// create an accessor in the User class to get the User id:	return user.getUserID();
-		return "dtet";
+		return user.getUserID();
 	}
 	
 	public String getThread() {
 		
-		return "dfsdf";
+		for (int i = 0; i <thread.size(); i++) {
+			if (thread.size() > 0) {
+				return thread.get(i);
+			}
+		}
+		return null;
 	}
 }

@@ -22,16 +22,27 @@ public class PlayStore {
 	}
 	
 	public void showReadingOfGenre(String genre) {
-		//yesReading =
-		System.out.println(genre + "is a title in the category:" + Library.);
+		//yesRe
+		for(i=0; i<HashMap.size(); i++) {
+			if (Library.get(i).showContentItems().contains(genre)) {
+				System.out.println(Library.get(i).getClass());
+			}
+		}
+		//System.out.println(genre + "is a title in the category:" + Library.);
 	}
 	
 	
 	public void showContent() {
-		System.out.println("This collection contains: " + Library.entrySet());
-		for (int i = 0 ; i <Library.size(); i++) {
-			System.out.println(Library.get(i).getClass()); 
-		}
+		System.out.println("This collection contains: " + Library.keySet()); //keySet or entrySet
+		
+		//ArrayList<String> arList = new ArrayList<String>();
+		///for (Library.Entry<String, String> entry > map : Library.entrySet()) {
+			
+		//}
+			//}
+			//i <Library.size(); i++) {
+		//	System.out.println(Library.get(i).getClass()); 
+		//}
 	}
 	
 }

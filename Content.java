@@ -31,4 +31,6 @@ abstract public class Content {
 
 	public abstract String getID();
 	
+	public abstract String showContentItems();
+	
 }
