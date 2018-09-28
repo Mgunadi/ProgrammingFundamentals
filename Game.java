@@ -3,7 +3,8 @@ public class Game extends Content{
 
 	private boolean isMultiplayer;
 	private OS os;
-	private static Array String [] gametypes = String{"Pokemon", "Minecraft", "GTA"};
+	private static String genreTypes[] = {"Pokemon", "Minecraft", "GTA", "Danceworld"};
+	private static String genre = "Game";
 	
 	public Game(String ID, String appName, String reviews, int downloads, double price, boolean isMultiplayer, OS os) {
 		super(ID, appName, reviews, downloads, price);
@@ -28,7 +29,12 @@ public class Game extends Content{
 	}
 	
 	public void showContentItems() {
-		System.out.println("The following are types of games available for purchase: \n1. Pokemon, \n2. Minecraft, \n3. Grand Theft Auto, \n4. Danceworld.");
-		return gametypes.get()..appName.);
+		for (int i=0; i < genreTypes.length; i++) {
+				System.out.println(genreTypes[i]);
+		} 	
+	}
+	
+	public String getGenre() {
+		return genre;
 	}
 }

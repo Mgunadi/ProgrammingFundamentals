@@ -1,3 +1,4 @@
+import java.util.*;
 import java.util.Hashtable;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -22,27 +23,17 @@ public class PlayStore {
 	}
 	
 	public void showReadingOfGenre(String genre) {
-		//yesRe
-		for(i=0; i<HashMap.size(); i++) {
-			if (Library.get(i).showContentItems().contains(genre)) {
-				System.out.println(Library.get(i).getClass());
+	
+		for(String currentKey : Library.keySet()) {
+			if (Library.get(currentKey).getGenre().equals(genre)) {
+				System.out.println(Library.get(currentKey).getClass());
 			}
 		}
-		//System.out.println(genre + "is a title in the category:" + Library.);
 	}
 	
-	
 	public void showContent() {
-		System.out.println("This collection contains: " + Library.keySet()); //keySet or entrySet
-		
-		//ArrayList<String> arList = new ArrayList<String>();
-		///for (Library.Entry<String, String> entry > map : Library.entrySet()) {
-			
-		//}
-			//}
-			//i <Library.size(); i++) {
-		//	System.out.println(Library.get(i).getClass()); 
-		//}
+		System.out.println("This collection contains: " + Library.entrySet()); 
+	
 	}
 	
 }
