@@ -2,7 +2,7 @@ import java.util.Hashtable;
 import java.util.ArrayList;
 
 public class PlayStore {
-	//Instance variables
+	
 	// whatever variables you need here.
 	// They must all be marked as private
 	
@@ -10,15 +10,11 @@ public class PlayStore {
 	
 	// Declare a private variable (array or similar) to store your User objects here
 	
-	private ArrayList<Content> content = new ArrayList<Content>();
-	private HashMap<User> user = new HashMap<User>();
 	
-	//Constructor
 	public PlayStore() {
 		// any code you need here
 	}
 	
-	//Methods
 	public void add(String id, Content content) {
 		// add the content into your content list
 	}
