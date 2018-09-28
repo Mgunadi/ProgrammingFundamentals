@@ -17,6 +17,12 @@ public class User {
 	}
 	
 	public void becomePremium() {
+		if ((balance -= 100) > 0){
+			balance = balance -= 100;
+			isPremium = true;}
+		else {
+			System.out.println("You do not have enough in your account");
+			isPremium = false;}			
 		
 	}
 	
