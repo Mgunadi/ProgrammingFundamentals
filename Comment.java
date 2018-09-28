@@ -16,4 +16,10 @@ public class Comment {
 		thread.add(reply); 	
 		
 	}
+	
+	public String getUser() {
+		
+	// create an accessor in the User class to get the User id:	return user.getUserID();
+	return "dtet";
+	}
 }
