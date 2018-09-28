@@ -21,10 +21,14 @@ public class Content {
 		
 	}
 	
-	public void showReview(String c) {
+	public void showReview() {
 		for (int i = 0 ; i <Reviews.size(); i++) {
-			System.out.println();;  // gets the value, username, for the key, userid (eg. u1), 
+			System.out.println(Reviews.get(i).getUser() + " : " + Reviews.get(i).getThread());   
 		}
+	}
+	
+	public double getPrice() {
+		return price;
 	}
 
 }
