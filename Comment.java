@@ -2,21 +2,18 @@ import java.util.ArrayList;
 public class Comment {
 
 	private User user;
-	private String text;
-	private ArrayList<Comment> thread = new ArrayList<Comment>();
+	//private String text;
+	private ArrayList<String> thread = new ArrayList<String>();
 	
-	public Comment(User user, String text, ArrayList<Comment> thread) {
+	public Comment(User user, ArrayList<String> thread) {
 		
 		this.user = user;
-		this.text = text;
 		this.thread = thread;
 	}
 	
-	public void addReply(Comment com) {
-		//this.Collection.add(com);
-	}
-	
-	public void showReview(Content content) {
-		// print out reviews of that content.
+	public void addReply(String reply) {
+
+		thread.add(reply); 	
+		
 	}
 }
