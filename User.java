@@ -43,7 +43,7 @@ public class User {
 	}
 	
 	public void buyContent(Content content) {
-		double price = content.getPrice();
+		/*double price = content.getPrice();
 		if (Premium = true)
 			price = content.getPrice() - (content.getPrice() * 0.1); 
 		else price = price;
@@ -61,7 +61,7 @@ public class User {
 	public void showcontentBought(){
 		for (int i = 0; i < Library.size(); i++)
 			System.out.println(Library.get(i));
-	}
+	}*/
 		
 	}
 }
