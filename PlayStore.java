@@ -25,8 +25,14 @@ public class PlayStore {
 	public void showReadingOfGenre(String genre) {
 	
 		for(String currentKey : Library.keySet()) {
-			if (Library.get(currentKey).getGenre().equals(genre)) {
-				System.out.println(Library.get(currentKey).getClass());
+			if (Library.get(currentKey) instanceof Book) {
+				if (((Book)Library.get(currentKey)).getGenre().equals(genre)) {
+					System.out.println(((Book)Library.get(currentKey)).getClass());
+				} 
+			} else if (Library.get(currentKey) instanceof Magazine) {
+				if (((Magazine)Library.get(currentKey)).getGenre().equals(genre)) {
+					System.out.println(((Magazine)Library.get(currentKey)).getClass());
+				}
 			}
 		}
 	}

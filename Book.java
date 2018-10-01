@@ -1,15 +1,17 @@
-import java.util.ArrayList; //Or happy to use hashmaps
+import java.util.ArrayList; 
 
 public class Book extends Reading{
 
-	ArrayList authorName;
+	private String[] author;
+	private String genre = "novel";
 	
+	public Book(String ID, String appName, String reviews, int downloads, double price, String genre, String publisher, int pages, String [] author) {
+		super(ID, appName, reviews, downloads, price, genre, publisher, pages);
+		this.author = author;
 	
-	//Need to add in constructors
+	}
 	
-	
-	//Add in methods
-
-
-	
+	public String getGenre() {
+		return genre;
+	}
 }

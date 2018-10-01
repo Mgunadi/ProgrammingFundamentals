@@ -9,6 +9,11 @@ abstract public class Reading extends Content{
 		this.pages = pages;
 		this.genre = genre;
 		this.publisher = publisher;
+			
 	}
 
+	public String getGenre() {
+		return genre;
+		
+	}
 }
