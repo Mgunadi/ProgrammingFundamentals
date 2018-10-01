@@ -1,10 +1,8 @@
 
-public class Game extends Content{
+public class Game extends Content {
 
 	private boolean isMultiplayer;
 	private OS os;
-	private static String genreTypes[] = {"Pokemon", "Minecraft", "GTA", "Danceworld"};
-	private static String genre = "Game";
 	
 	public Game(String ID, String appName, String reviews, int downloads, double price, boolean isMultiplayer, OS os) {
 		super(ID, appName, reviews, downloads, price);
@@ -28,13 +26,18 @@ public class Game extends Content{
 		return super.price;
 	}
 	
-	public void showContentItems() {
+	/*public void showContentItems() {
 		for (int i=0; i < genreTypes.length; i++) {
 				System.out.println(genreTypes[i]);
 		} 	
+	}*/
+	
+	public String getOSname() {
+		return os.getOSname();
 	}
 	
-	public String getGenre() {
-		return genre;
+	public int getOSversion() {
+		return os.getOSversion();
 	}
+	
 }
