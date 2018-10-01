@@ -1,13 +1,14 @@
 
-public class Reading extends Content{
+abstract public class Reading extends Content{
 	
-	int pages;
-	String genre, publisher;
+	private int pages;
+	private String genre, publisher;
 	
-	//Need to add in constructors
-	
-	
-	//Add in methods
-
+	public Reading(String ID, String appName, String reviews, int downloads, double price, String genre, String publisher, int pages) {
+		super(ID, appName, reviews, downloads, price);
+		this.pages = pages;
+		this.genre = genre;
+		this.publisher = publisher;
+	}
 
 }
