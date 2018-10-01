@@ -44,7 +44,7 @@ public class User {
 	
 	public void buyContent(Content content) {
 		/*double price = content.getPrice();
-		if (Premium = true)
+		if (Premium == true)
 			price = content.getPrice() - (content.getPrice() * 0.1); 
 		else price = price;
 		if (enoughBalance(price) == true) {
@@ -52,6 +52,18 @@ public class User {
 			balance =- price;
 			//content.getDownloads() + 1;
 			Library.add(content);
+			if (content.getType == game){
+				if this.OS.Name == game.OS.Name{
+					if this.version = game.version 
+						print same version
+					else if this.version > game.version
+						print your version is more up to date than the game
+					else {	
+						System.out.println("you need to upgrade your operating system to at least " + game.version + " to be able to play this game");
+					}
+				}
+				else 
+					System.out.println("you do not have the correct operating system for this game");
 		}
 		else {
 			System.out.println("You do not have enough in your account");
@@ -61,7 +73,12 @@ public class User {
 	public void showcontentBought(){
 		for (int i = 0; i < Library.size(); i++)
 			System.out.println(Library.get(i));
-	}*/
-		
+	*/}
+	
+	public String getUserID() {
+		return UserID;
 	}
+
+	
+	
 }
