@@ -73,7 +73,13 @@ public class User {
 	public void showcontentBought(){
 		for (int i = 0; i < Library.size(); i++)
 			System.out.println(Library.get(i));
-	}*/
-		
+	*/}
+	
+	public String getUserID() {
+		return UserID;
+	}
+
+	
+	
 	}
 }
