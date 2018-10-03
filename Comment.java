@@ -9,13 +9,13 @@ public class Comment {
 		thread.add(comment);
 		
 	}
-	public Comment(User user, ArrayList<String> thread) {
+	//public Comment(User user, ArrayList<Comment> thread) {
 		
-		this.user = user;
-		this.thread = thread;
-	}
+	//	this.user = user;
+	//	this.thread = thread;
+	//}
 	
-	public void addReply(String reply) {
+	public void addReply(Comment reply) {
 
 		thread.add(reply); 	
 		
