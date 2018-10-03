@@ -9,6 +9,7 @@ public class User {
 	private boolean isPremium = false; 
 	private ArrayList<Content>Library = new ArrayList<Content>();
 	boolean hasEnough;
+	double price;
 	
 	public User(String ID, String name, String phone, double balance, OS os) {
 		UserID = ID;
@@ -58,7 +59,16 @@ public class User {
 	}
 	
 	public void buyContent(Content content) {
-		double price = content.getPrice();
+		if (content instanceof Game)
+			{
+			System.out.println("You have chosen to buy a game!");
+			checkCompatibility((Game)content);
+			}
+		else
+			{
+			System.out.println("You are buying something that doesn't need an operating system.");
+			}
+		price = content.getPrice();
 		if (isPremium == true)
 			{
 			price = content.getPrice() - (content.getPrice() * 0.1);
@@ -69,17 +79,10 @@ public class User {
 			content.addDownload();
 			Library.add(content);
 			
-			if (content instanceof Game) {
-				//check compatibility
 			};
 			
 		
 		}
-		else {
-			System.out.println("You do not have enough in your account");
-			//not allowed to buy
-		}
-	}
 	
 	public void showcontentBought()
 		{
