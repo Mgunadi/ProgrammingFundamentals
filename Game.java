@@ -3,9 +3,6 @@ public class Game extends Content{
 
 	private boolean isMultiplayer;
 	private OS os;
-	private static String genreTypes[] = {"Pokemon", "Minecraft", "GTA", "Danceworld"};
-	private static String genre = "Game";
-	
 	
 	public Game(String ID, String appName, double price, boolean isMultiplayer, OS os) {
 		super(ID, appName, price);
@@ -29,21 +26,12 @@ public class Game extends Content{
 		}
 	}
 	
-	public String getID() {
-		return super.ID;
-	}
-
-	public double getPrice() {
-		return super.price;
-	}
-	
-	public void showContentItems() {
-		for (int i=0; i < genreTypes.length; i++) {
-				System.out.println(genreTypes[i]);
-		} 	
+	public void showContent(PlayStore store) {
+		for(String currentKey : store.Library.keySet()) {
+			if (store.Library.get(currentKey) instanceof Game) {
+				System.out.println(((Game)store.Library.get(currentKey)));
+			}
+		}
 	}
 	
-	public String getGenre() {
-		return genre;
-	}
 }

@@ -6,7 +6,6 @@ abstract public class Content {
 	protected int downloads;
 	protected double price;
 	protected ArrayList<Comment> Reviews = new ArrayList<Comment>();
-	// private HashMap<String, ArrayList<String>> Reviews = new HashMap<String, ArrayList<String>>();
 
 	public Content(String ID, String appName, ArrayList<Comment> Reviews, int downloads, double price) {
 		this.ID = ID;
@@ -25,6 +24,7 @@ abstract public class Content {
 	
 	
 	public void addReview(Comment comment) {
+		
 		Reviews.add(comment);
 		
 	}
@@ -35,12 +35,18 @@ abstract public class Content {
 		}
 	}
 	
-	public abstract double getPrice();
-
-	public abstract String getID();
+	public double getPrice(){
+		return price;
+	}
 	
-	public abstract void showContentItems();
+	public String getID() {
+		return ID;
+	}
 	
-	public abstract String getGenre();
+	public String getName() {
+		return appName;
+	}
+	
+	public abstract void showContent(PlayStore store);
 	
 }
