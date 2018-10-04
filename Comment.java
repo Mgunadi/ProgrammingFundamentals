@@ -9,22 +9,17 @@ public class Comment {
 		thread.add(comment);
 		
 	}
-	//public Comment(User user, ArrayList<Comment> thread) {
-		
-	//	this.user = user;
-	//	this.thread = thread;
-	//}
 	
 	public void addReply(Comment reply) {
 
-		thread.add(reply); 	
+		thread.add(reply.getThread()); 	
 		
 	}
 	
 	public String getUser() {
 		
-	// create an accessor in the User class to get the User id:	return user.getUserID();
 		return user.getUserID();
+	
 	}
 	
 	public String getThread() {

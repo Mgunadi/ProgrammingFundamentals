@@ -17,4 +17,13 @@ public class Book extends Reading{
 	public String getGenre() {
 		return genre;
 	}
+	
+	public void showContent(PlayStore store) {
+		for(String currentKey : store.Library.keySet()) {
+			if (store.Library.get(currentKey) instanceof Book) {
+				System.out.println(((Book)store.Library.get(currentKey)));
+			}
+		}
+	}
+	
 }
