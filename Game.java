@@ -5,7 +5,6 @@ public class Game extends Content{
 	private boolean isMultiplayer;
 	private OS os;
 	
-	
 	public Game(String ID, String appName, double price, boolean isMultiplayer, OS os) {
 		super(ID, appName, price);
 		this.isMultiplayer = isMultiplayer;
@@ -27,16 +26,14 @@ public class Game extends Content{
 			System.out.println("This game is a single-player");
 		}
 	}
-
-	public double getPrice() {
-		return super.price;
-	}
 	
-	/*public void showContentItems() {
-		for (int i=0; i < genreTypes.length; i++) {
-				System.out.println(genreTypes[i]);
-		} 	
-	}*/
+	public void showContent(PlayStore store) {
+		for(String currentKey : store.Library.keySet()) {
+			if (store.Library.get(currentKey) instanceof Game) {
+				System.out.println(((Game)store.Library.get(currentKey)));
+			}
+		}
+	}
 	
 	public String getOSname() {
 		return os.getOSname();
@@ -45,5 +42,4 @@ public class Game extends Content{
 	public int getOSversion() {
 		return os.getOSversion();
 	}
-	
 }

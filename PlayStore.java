@@ -8,7 +8,7 @@ public class PlayStore {
 	
 	//private static ReadingList = 
 	private String id;
-	private HashMap<String, Content> Library = new HashMap<String, Content>();
+	public HashMap<String, Content> Library = new HashMap<String, Content>();
 	private ArrayList<User> UserList = new ArrayList<User>();
 	
 	public PlayStore() {
@@ -38,8 +38,9 @@ public class PlayStore {
 	}
 	
 	public void showContent() {
-		System.out.println("This collection contains: " + Library.entrySet()); 
-	
+		System.out.println("This collection contains: ");
+		for (String currentKey : Library.keySet()) {
+			System.out.println(Library.get(currentKey).getName()); 
+		}	
 	}
-	
 }
