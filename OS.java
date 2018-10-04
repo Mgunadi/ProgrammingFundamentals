@@ -9,4 +9,13 @@ public class OS {
 		this.version = version;
 	}
 	
+	public String getOSname() {
+		return OSname;
+	}
+	
+	public int getOSversion() {
+		return version;
+	}
+	
+
 }
