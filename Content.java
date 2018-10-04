@@ -26,7 +26,6 @@ abstract public class Content {
 	
 	public void addReview(Comment comment) {
 		Reviews.add(comment);
-		
 	}
 	
 	public void showReviews() {
@@ -35,12 +34,21 @@ abstract public class Content {
 		}
 	}
 	
-	public abstract double getPrice();
+	public double getPrice()
+		{
+		return price;
+		}
 
 	public abstract String getID();
 	
 	public abstract void showContentItems();
 	
 	public abstract String getGenre();
+	
+	public int addDownload()
+		{
+		downloads += 1;
+		return downloads;
+		}
 	
 }

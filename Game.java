@@ -1,10 +1,9 @@
+
 import java.util.ArrayList;
 public class Game extends Content{
 
 	private boolean isMultiplayer;
 	private OS os;
-	private static String genreTypes[] = {"Pokemon", "Minecraft", "GTA", "Danceworld"};
-	private static String genre = "Game";
 	
 	
 	public Game(String ID, String appName, double price, boolean isMultiplayer, OS os) {
@@ -37,13 +36,18 @@ public class Game extends Content{
 		return super.price;
 	}
 	
-	public void showContentItems() {
+	/*public void showContentItems() {
 		for (int i=0; i < genreTypes.length; i++) {
 				System.out.println(genreTypes[i]);
 		} 	
+	}*/
+	
+	public String getOSname() {
+		return os.getOSname();
 	}
 	
-	public String getGenre() {
-		return genre;
+	public int getOSversion() {
+		return os.getOSversion();
 	}
+	
 }

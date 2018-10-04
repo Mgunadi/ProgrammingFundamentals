@@ -1,20 +1,22 @@
 import java.util.ArrayList;
+import java.util.Objects;
 public class User {
 	
 	private String UserID, UserName, phoneNo;
 	private double balance;
-	private OS OSType;
+	private OS os;
 	
 	private boolean isPremium = false; 
 	private ArrayList<Content>Library = new ArrayList<Content>();
 	boolean hasEnough;
+	double price;
 	
 	public User(String ID, String name, String phone, double balance, OS os) {
 		UserID = ID;
 		UserName = name;
 		phoneNo = phone;
 		this.balance = balance;
-		OSType = os;
+		this.os = os;
 	}
 	
 	public boolean enoughBalance(double amount) {
@@ -42,42 +44,55 @@ public class User {
 			isPremium = false;}			
 	}
 	
+	public void checkCompatibility(Game game) {
+		if (Objects.equals(game.getOSname(), os.getOSname()) == true) {
+			if (game.getOSversion() <= os.getOSversion()) {
+				System.out.println("Your operating system and the game are compatible. Woo hoo!!");
+			}
+			else if (game.getOSversion() > os.getOSversion()) {
+				System.out.println("While you have the correct OS, you are still screwed. You need to update your operating system or find another game to play");
+			}
+			else System.out.println("Not sure what happened! See Verity to complain");
+		}
+		else 
+			System.out.println("Your operating system and the game are not compatible. Please choose another game");
+	}
+	
 	public void buyContent(Content content) {
-		/*double price = content.getPrice();
-		if (Premium == true)
-			price = content.getPrice() - (content.getPrice() * 0.1); 
-		else price = price;
+		if (content instanceof Game)
+			{
+			System.out.println("You have chosen to buy a game!");
+			checkCompatibility((Game)content);
+			}
+		else
+			{
+			System.out.println("You are buying something that doesn't need an operating system.");
+			}
+		price = content.getPrice();
+		if (isPremium == true)
+			{
+			price = content.getPrice() - (content.getPrice() * 0.1);
+			}
 		if (enoughBalance(price) == true) {
 			//buy
 			balance =- price;
-			//content.getDownloads() + 1;
+			content.addDownload();
 			Library.add(content);
-			if (content.getType == game){
-				if this.OS.Name == game.OS.Name{
-					if this.version = game.version 
-						print same version
-					else if this.version > game.version
-						print your version is more up to date than the game
-					else {	
-						System.out.println("you need to upgrade your operating system to at least " + game.version + " to be able to play this game");
-					}
-				}
-				else 
-					System.out.println("you do not have the correct operating system for this game");
-		}
-		else {
-			System.out.println("You do not have enough in your account");
-			//not allowed to buy
+			
+			};
+			
+		
 		}
 	
-	public void showcontentBought(){
+	public void showcontentBought()
+		{
 		for (int i = 0; i < Library.size(); i++)
 			System.out.println(Library.get(i));
-	*/}
+		}
 	
 	public String getUserID() {
 		return UserID;
-	}
+		}
 
 	
 	
