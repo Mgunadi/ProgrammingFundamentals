@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 abstract public class Content {
 	
 	protected String ID, appName;
@@ -46,16 +45,11 @@ abstract public class Content {
 		return appName;
 	}
 	
-	public abstract void showContent(PlayStore store);
-	
-	public int addDownload()
-		{
+	public int addDownload() {
 		downloads += 1;
 		return downloads;
-		}
-	
-	public String getName() {
-		return appName;
 	}
+
+	public abstract void showContent(PlayStore store);
 	
 }
