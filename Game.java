@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 public class Game extends Content{
 
@@ -34,4 +35,11 @@ public class Game extends Content{
 		}
 	}
 	
+	public String getOSname() {
+		return os.getOSname();
+	}
+	
+	public int getOSversion() {
+		return os.getOSversion();
+	}
 }

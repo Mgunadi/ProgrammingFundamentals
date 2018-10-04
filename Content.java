@@ -26,7 +26,6 @@ abstract public class Content {
 	public void addReview(Comment comment) {
 		
 		Reviews.add(comment);
-		
 	}
 	
 	public void showReviews() {
@@ -35,10 +34,10 @@ abstract public class Content {
 		}
 	}
 	
-	public double getPrice(){
+	public double getPrice() {
 		return price;
-	}
-	
+		}
+
 	public String getID() {
 		return ID;
 	}
@@ -48,5 +47,15 @@ abstract public class Content {
 	}
 	
 	public abstract void showContent(PlayStore store);
+	
+	public int addDownload()
+		{
+		downloads += 1;
+		return downloads;
+		}
+	
+	public String getName() {
+		return appName;
+	}
 	
 }
