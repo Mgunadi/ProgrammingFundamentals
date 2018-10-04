@@ -20,5 +20,12 @@ public class Magazine extends Reading{
 		return genre;
 	}
 
+	public void showContent(PlayStore store) {
+		for(String currentKey : store.Library.keySet()) {
+			if (store.Library.get(currentKey) instanceof Magazine) {
+				System.out.println(((Magazine)store.Library.get(currentKey)));
+			}
+		}
+	}
 
 }

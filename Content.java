@@ -46,6 +46,11 @@ abstract public class Content {
 		return appName;
 	}
 	
+	public int addDownload() {
+		downloads += 1;
+		return downloads;
+	}
+
 	public abstract void showContent(PlayStore store);
 	
 	public int addDownload()
