@@ -17,9 +17,14 @@ public class Test {
           User u2 = new User("u2", "Jane Doe", "0412001", 120, androidV4);
           Game g1 = new Game("g1", "Pokemon", 5, false, androidV4);
           Comment comment1 = new Comment(u1, "This is a fantastic game!");
-          g1.addReview(comment1);
+          System.out.println(g1.getName());
+          System.out.println(comment1.getThread());
+        
+          //g1.addReview(comment1);
           Comment reply1 = new Comment(u2, "I never liked this game!");
           comment1.addReply(reply1);
+          
+          System.out.println(comment1.getThread());
           g1.showReviews();
 	}
 
