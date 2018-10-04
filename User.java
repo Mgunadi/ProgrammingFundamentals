@@ -80,7 +80,6 @@ public class User {
 			Library.add(content);
 			
 			};
-			
 		
 		}
 	

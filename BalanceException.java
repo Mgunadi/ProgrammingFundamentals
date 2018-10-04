@@ -1,5 +1,16 @@
 
-class BalanceException extends Exception{
+public class BalanceException extends Exception{
+	
+	
+	private double balance;
+	
+	public BalanceException(double balance, double amount) {
+		super("Invalid balance " + balance);
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
 	
 	private String reason;
 	private double maxAvailable;
