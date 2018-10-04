@@ -21,7 +21,6 @@ public class User {
 	
 	public boolean enoughBalance(double amount) {
 		if ((balance -= amount) > 0) {
-			System.out.println("Congratulations you have enough money!!!");
 			hasEnough = true;
 			return hasEnough;}
 		else {
@@ -36,8 +35,7 @@ public class User {
 			System.out.println("Your new balance is: $" + balance);
 			isPremium = true;
 			System.out.println("Congratulations you are now a premium member");
-		}
-		
+		}		
 		else {
 			System.out.println("You do not have enough in your account");
 			System.out.println("Please add more money into your account and then try again");
@@ -64,10 +62,6 @@ public class User {
 			System.out.println("You have chosen to buy a game!");
 			checkCompatibility((Game)content);
 			}
-		else
-			{
-			System.out.println("You are buying something that doesn't need an operating system.");
-			}
 		price = content.getPrice();
 		if (isPremium == true)
 			{
@@ -77,14 +71,12 @@ public class User {
 			//buy
 			balance =- price;
 			content.addDownload();
-			Library.add(content);
-			
-			};
-			
+			Library.add(content);			
+			}
 		
 		}
 	
-	public void showcontentBought()
+	public void showContentBought()
 		{
 		for (int i = 0; i < Library.size(); i++)
 			System.out.println(Library.get(i));

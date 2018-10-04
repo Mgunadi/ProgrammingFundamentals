@@ -27,10 +27,6 @@ public class Game extends Content{
 			System.out.println("This game is a single-player");
 		}
 	}
-	
-	public String getID() {
-		return super.ID;
-	}
 
 	public double getPrice() {
 		return super.price;
