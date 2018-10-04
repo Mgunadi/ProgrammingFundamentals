@@ -39,7 +39,9 @@ abstract public class Content {
 		return price;
 		}
 
-	public abstract String getID();
+	public String getID() {
+		return ID;
+	}
 	
 	public abstract void showContentItems();
 	
