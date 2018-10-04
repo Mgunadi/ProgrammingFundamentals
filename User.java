@@ -20,7 +20,7 @@ public class User {
 	}
 	
 	public boolean enoughBalance(double amount) {
-		if ((balance -= amount) > 0) {
+		if ((balance - amount) > 0) {
 			hasEnough = true;
 			return hasEnough;}
 		else {
@@ -31,13 +31,12 @@ public class User {
 	
 	public void becomePremium() {
 		if (enoughBalance(100) == true) {
-			balance -= 100;
+			balance = balance - 100;
 			System.out.println("Your new balance is: $" + balance);
 			isPremium = true;
 			System.out.println("Congratulations you are now a premium member");
 		}		
 		else {
-			System.out.println("You do not have enough in your account");
 			System.out.println("Please add more money into your account and then try again");
 			isPremium = false;}			
 	}
@@ -45,12 +44,13 @@ public class User {
 	public void checkCompatibility(Game game) {
 		if (Objects.equals(game.getOSname(), os.getOSname()) == true) {
 			if (game.getOSversion() <= os.getOSversion()) {
-				System.out.println("Your operating system and the game are compatible. Woo hoo!!");
+				System.out.println("You have the correct operating system and version to play " + game.getName());
 			}
-			else if (game.getOSversion() > os.getOSversion()) {
-				System.out.println("While you have the correct OS, you are still screwed. You need to update your operating system or find another game to play");
-			}
-			else System.out.println("Not sure what happened! See Verity to complain");
+			else 
+				{
+				System.out.println("You are trying to purchase a game that you do not have the correct version of the operating system");
+				System.out.println("You need to update your operating system or choose a different version of " + game.getName());
+				}
 		}
 		else 
 			System.out.println("Your operating system and the game are not compatible. Please choose another game");
@@ -59,7 +59,6 @@ public class User {
 	public void buyContent(Content content) {
 		if (content instanceof Game)
 			{
-			System.out.println("You have chosen to buy a game!");
 			checkCompatibility((Game)content);
 			}
 		price = content.getPrice();
@@ -69,9 +68,11 @@ public class User {
 			}
 		if (enoughBalance(price) == true) {
 			//buy
-			balance =- price;
+			balance = balance - price;
 			content.addDownload();
-			Library.add(content);			
+			Library.add(content);
+			System.out.println("You have successfully bought " + content.getName());
+			System.out.println("Your balance is now: $" + balance);
 			}
 		
 		}

@@ -53,4 +53,8 @@ abstract public class Content {
 		return downloads;
 		}
 	
+	public String getName() {
+		return appName;
+	}
+	
 }
