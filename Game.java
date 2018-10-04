@@ -1,11 +1,21 @@
 
-public class Game extends Content {
+import java.util.ArrayList;
+public class Game extends Content{
 
 	private boolean isMultiplayer;
 	private OS os;
 	
-	public Game(String ID, String appName, String reviews, int downloads, double price, boolean isMultiplayer, OS os) {
-		super(ID, appName, reviews, downloads, price);
+	
+	public Game(String ID, String appName, double price, boolean isMultiplayer, OS os) {
+		super(ID, appName, price);
+		this.isMultiplayer = isMultiplayer;
+		this.os = os;
+		Reviews = null;
+		downloads = 0;
+	}
+	
+	public Game(String ID, String appName, ArrayList<Comment> Reviews, int downloads, double price, boolean isMultiplayer, OS os) {
+		super(ID, appName, Reviews, downloads, price);
 		this.isMultiplayer = isMultiplayer;
 		this.os = os;
 	}
