@@ -19,26 +19,21 @@ public class User {
 		this.os = os;
 	}
 	
-	public boolean enoughBalance(double amount) {
-		if ((balance - amount) > 0) {
-			hasEnough = true;
-			return hasEnough;}
-		else {
-			System.out.println("You do not have enough money in your account");
-			hasEnough = false;
-			return hasEnough;}	
-	}
-	
 	public void becomePremium() {
-		if (enoughBalance(100) == true) {
+		try {
+			System.out.println("Your initial balance is: $" + balance);
+			
+			if (balance < 100) {
+				throw new BalanceException(balance, 100);
+				}
 			balance = balance - 100;
-			System.out.println("Your new balance is: $" + balance);
 			isPremium = true;
 			System.out.println("Congratulations you are now a premium member");
-		}		
-		else {
-			System.out.println("Please add more money into your account and then try again");
-			isPremium = false;}			
+			}
+		catch (BalanceException e) {
+			System.out.println("You do not have enough money in your account");
+			System.out.println("You are not a premium member");
+		}	
 	}
 	
 	public void checkCompatibility(Game game) {
@@ -62,19 +57,31 @@ public class User {
 			checkCompatibility((Game)content);
 			}
 		price = content.getPrice();
+		System.out.println("The price is: $" + price);
+
 		if (isPremium == true)
 			{
+			System.out.println("You are a premium member so you get a discount");
+			System.out.println("The initial price was $" + content.getPrice());
 			price = content.getPrice() - (content.getPrice() * 0.1);
+			System.out.println("The price you get to pay is $" + price);
 			}
-		if (enoughBalance(price) == true) {
-			//buy
+		try {
+			System.out.println("Your initial balance is: $" + balance);
+			if (balance < price) {
+				throw new BalanceException(balance, price);
+			}
 			balance = balance - price;
 			content.addDownload();
 			Library.add(content);
 			System.out.println("You have successfully bought " + content.getName());
 			System.out.println("Your balance is now: $" + balance);
 			}
-		
+		catch (BalanceException e) {
+			System.out.println("You do not have enough money in your account");
+			System.out.println("The purchase has not been made");
+		}
+			
 		}
 	
 	public void showContentBought()

@@ -3,9 +3,12 @@ public class BalanceException extends Exception{
 	
 	
 	private double balance;
+	private double amount;
 	
 	public BalanceException(double balance, double amount) {
 		super("Invalid balance " + balance);
+		this.balance = balance;
+		this.amount = amount;
 	}
 	
 	public double getBalance() {
