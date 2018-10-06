@@ -1,34 +1,45 @@
-import java.util.ArrayList;
+import java.util.*;
 public class Comment {
 
 	private User user;
-	private ArrayList<String> thread = new ArrayList<String>();
+	private String text;
+	public HashMap<User, Comment> replies;
 	
-	public Comment(User user, String comment) {
+	public Comment(User user, String text) {
 		this.user = user;
-		thread.add(comment);
+		this.text = text;
 		
+		replies = new HashMap<User, Comment>();
+		replies.put(user, this);
 	}
 	
-	public void addReply(Comment reply) {
-
-		thread.add(reply.getThread()); 	
-		
+	
+	public void addReply(Comment comt) {
+		//this.user = comt.user;
+		//this.text = comt.text;
+		replies.put(comt.user, comt);
 	}
+	
 	
 	public String getUser() {
-		
 		return user.getUserID();
 	
 	}
 	
-	public String getThread() {
-		
-		for (int i = 0; i <thread.size(); i++) {
-			if (thread.size() > 0) {
-				return thread.get(i);
+	public String getText() {
+		return text;
+	}
+	
+	public void getThread() {
+		for(User currentKey : replies.keySet()) {
+			if (replies.size() > 0) {
+				System.out.println(replies.get(currentKey).getText());
 			}
 		}
-		return null;
 	}
+	
+	public HashMap<User, Comment> getReplies(){
+		return replies;
+	}
+	
 }
