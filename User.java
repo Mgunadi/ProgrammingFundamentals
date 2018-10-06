@@ -41,10 +41,11 @@ public class User {
 	
 	public void checkCompatibility(Game game)
 		{
-		if (Objects.equals(game.getOSname(), os.getOSname()) == true)
-			{
-			if (game.getOSversion() <= os.getOSversion())
+		try {
+			if (Objects.equals(game.getOSname(), os.getOSname()) == true)
 				{
+				if (game.getOSversion() <= os.getOSversion())
+					{
 				System.out.println("You have the correct operating system and version to play " + game.getName());
 				}
 			else 
@@ -69,7 +70,6 @@ public class User {
 		if (isPremium == true)
 			{
 			System.out.println("You are a premium member so you get a discount");
-			System.out.println("The initial price was $" + content.getPrice());
 			price = content.getPrice() - (content.getPrice() * 0.1);
 			System.out.println("The price you get to pay is $" + price);
 			}
