@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+import java.util.*;
 abstract public class Content {
 	
 	protected String ID, appName;
 	protected int downloads;
 	protected double price;
-	protected ArrayList<Comment> Reviews = new ArrayList<Comment>();
+	public ArrayList<Comment> Reviews; 
 
 	public Content(String ID, String appName, ArrayList<Comment> Reviews, int downloads, double price) {
 		this.ID = ID;
@@ -23,13 +23,15 @@ abstract public class Content {
 	
 	
 	public void addReview(Comment comment) {
-		
+		Reviews = new ArrayList<Comment>();
 		Reviews.add(comment);
 	}
 	
 	public void showReviews() {
+		//HashMap<User, Comment> replies = new HashMap<User, Comment>();
 		for (int i = 0 ; i <Reviews.size(); i++) {
-			System.out.println(Reviews.get(i).getUser() + " : " + Reviews.get(i).getThread());   
+			for (User currentKey : replies.keySet()) {
+				System.out.println(Reviews.get(i).get(currentKey).getUser() + " : " + Reviews.get(i).getText());   
 		}
 	}
 	

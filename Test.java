@@ -32,7 +32,7 @@ public class Test {
           //Create comment
           Comment comment1 = new Comment(u1, "This is a fantastic game!");
           //print comment
-          comment1.getThread();
+          //comment1.getThread();
         
           //Create 2nd comment and add it as a reply to comment1
           Comment reply1 = new Comment(u2, "I never liked this game!");
@@ -40,13 +40,13 @@ public class Test {
           
           //Print size and thread of comment1
           //reply1.getThread();
-          System.out.println(comment1.replies.values());
-          comment1.getThread();
+          //System.out.println(comment1.replies.values());
+          //comment1.getThread();
           
+          //Add comment to game.
+          g1.addReview(comment1);
           
-          
-          
-          //g1.showReviews();
+          g1.showReviews();
 	}
 
 }

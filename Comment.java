@@ -37,4 +37,9 @@ public class Comment {
 			}
 		}
 	}
+	
+	public HashMap<User, Comment> getReplies(){
+		return replies;
+	}
+	
 }
