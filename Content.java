@@ -30,8 +30,9 @@ abstract public class Content {
 	public void showReviews() {
 		//HashMap<User, Comment> replies = new HashMap<User, Comment>();
 		for (int i = 0 ; i <Reviews.size(); i++) {
-			for (User currentKey : replies.keySet()) {
-				System.out.println(Reviews.get(i).get(currentKey).getUser() + " : " + Reviews.get(i).getText());   
+			for (User currentKey : Reviews.get(i).getReplies().keySet()) {
+				System.out.println(Reviews.get(i).getReplies().get(currentKey).getUser() + " : " + Reviews.get(i).getReplies().get(currentKey).getText());   
+			}
 		}
 	}
 	
