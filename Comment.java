@@ -1,16 +1,18 @@
 import java.util.*;
-public class Comment {
+public class Comment
+	{
 
 	private User user;
 	private String text;
 	public HashMap<User, Comment> replies;
 	
-	public Comment(User user, String text) {
+	public Comment(User user, String text)
+		{
 		this.user = user;
 		this.text = text;
 		replies = new HashMap<User, Comment>();
 		replies.put(user, this);
-	}
+		}
 	
 	
 	public void addReply(Comment comt) {
