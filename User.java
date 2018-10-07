@@ -80,7 +80,7 @@ public class User {
 	public void showContentBought()
 		{
 		for (int i = 0; i < Library.size(); i++)
-			System.out.println(Library.get(i));
+			System.out.println(Library.get(i).getName());
 		}
 	
 	public String getUserID() {

@@ -8,17 +8,17 @@ public class Test {
           String[] authors1 = {"L. Tolstoy"};
           Book b1 = new Book ("r1", "War and Peace", 12, "The Russian Messenger", "Novel", 1225, authors1);
           
+          // Create Magazine
+          Magazine m1 = new Magazine("r3", "Forbes", 8, "Forbes Media", "Business", 50, "World's richest under 30");
+          
           // Get genre of book
           System.out.println("Genre is" + b1.getGenre());
           
-          //Show content of store
-          store.add(b1.getID(),b1);
-          store.showContent();
-          
+        
           // create OS
           OS androidV4 = new OS("Android", 4);
           
-          
+ 
           //create Users
           User u1 = new User("u1", "John Doe", "0412000", 2000, androidV4);
           User u2 = new User("u2", "Jane Doe", "0412001", 120, androidV4);
@@ -45,8 +45,19 @@ public class Test {
           
           //Add comment to game.
           g1.addReview(comment1);
-          
+          b1.addReview(comment1);
           g1.showReviews();
+          b1.showReviews();
+          
+          //Show content of store
+          store.add(b1.getID(),b1);
+          store.add(g1.getID(), g1);
+          store.showContent();
+          
+          
+          //Test showReadingOfGenre()
+          store.showReadingOfGenre("Novel");
+          store.showReadingOfGenre("Business");
 	}
 
 }
