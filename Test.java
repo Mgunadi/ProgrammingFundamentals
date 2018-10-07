@@ -37,6 +37,8 @@ public class Test {
           //Create 2nd comment and add it as a reply to comment1
           Comment reply1 = new Comment(u2, "I never liked this game!");
           comment1.addReply(reply1);
+          Comment reply2 = new Comment(u1, "Why not?");
+          comment1.addReply(reply2);
           
           //Print size and thread of comment1
           //reply1.getThread();
