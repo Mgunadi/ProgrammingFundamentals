@@ -47,15 +47,25 @@ public class User {
 				if (game.getOSversion() <= os.getOSversion())
 					{
 				System.out.println("You have the correct operating system and version to play " + game.getName());
+					}
+				else
+					{
+					throw new VersionException(os.getOSversion(), game.getOSversion());
+					}
 				}
-			else 
+			else
 				{
-				System.out.println("You are trying to purchase a game that you do not have the correct version of the operating system");
-				System.out.println("You need to update your operating system or choose a different version of " + game.getName());
+				throw new OSException(os.getOSname(), game.getOSname());
 				}
 			}
-		else 
-			System.out.println("Your operating system and the game are not compatible. Please choose another game");
+		catch (OSException e)
+			{
+			System.out.println(e);
+			}	
+		catch (VersionException e)
+			{
+			System.out.println(e);
+			}
 		}
 	
 	public void buyContent(Content content)
