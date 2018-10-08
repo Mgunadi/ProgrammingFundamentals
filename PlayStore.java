@@ -27,11 +27,11 @@ public class PlayStore {
 		for(String currentKey : Library.keySet()) {
 			if (Library.get(currentKey) instanceof Book) {
 				if (((Book)Library.get(currentKey)).getGenre().equals(genre)) {
-					System.out.println(((Book)Library.get(currentKey)).getClass());
+					System.out.println(((Book)Library.get(currentKey)).getClass().getName());
 				} 
 			} else if (Library.get(currentKey) instanceof Magazine) {
 				if (((Magazine)Library.get(currentKey)).getGenre().equals(genre)) {
-					System.out.println(((Magazine)Library.get(currentKey)).getClass());
+					System.out.println(((Magazine)Library.get(currentKey)).getClass().getName());
 				}
 			}
 		}
