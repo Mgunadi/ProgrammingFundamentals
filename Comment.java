@@ -8,7 +8,6 @@ public class Comment {
 	public Comment(User user, String text) {
 		this.user = user;
 		this.text = text;
-		
 		replies = new HashMap<User, Comment>();
 		replies.put(user, this);
 		System.out.println("Comment constructor");
@@ -18,6 +17,7 @@ public class Comment {
 	public void addReply(Comment comt) {
 		//this.user = comt.user;
 		//this.text = comt.text;
+		System.out.println("Before add reply");
 		replies.put(comt.user, comt);
 		System.out.println("addReply worked");
 		
@@ -25,10 +25,12 @@ public class Comment {
 	
 	
 	public String getUser() {
+		System.out.println("getUser");
 		return user.getUserID();
 	}
 	
 	public String getText() {
+		System.out.println("getText");
 		return text;
 	}
 	
@@ -43,6 +45,7 @@ public class Comment {
 	}
 	
 	public HashMap<User, Comment> getReplies(){
+		System.out.println("get replies");
 		return replies;
 	}
 	
