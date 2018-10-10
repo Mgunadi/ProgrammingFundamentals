@@ -11,6 +11,7 @@ public class Comment {
 		
 		replies = new HashMap<User, Comment>();
 		replies.put(user, this);
+		System.out.println("Comment constructor");
 	}
 	
 	
@@ -18,12 +19,13 @@ public class Comment {
 		//this.user = comt.user;
 		//this.text = comt.text;
 		replies.put(comt.user, comt);
+		System.out.println("addReply worked");
+		
 	}
 	
 	
 	public String getUser() {
 		return user.getUserID();
-	
 	}
 	
 	public String getText() {
@@ -31,11 +33,13 @@ public class Comment {
 	}
 	
 	public void getThread() {
+		System.out.println("getThread started");
 		for(User currentKey : replies.keySet()) {
 			if (replies.size() > 0) {
 				System.out.println(replies.get(currentKey).getText());
 			}
 		}
+		System.out.println("getThread worked");
 	}
 	
 	public HashMap<User, Comment> getReplies(){

@@ -25,6 +25,7 @@ abstract public class Content {
 	public void addReview(Comment comment) {
 		Reviews = new ArrayList<Comment>();
 		Reviews.add(comment);
+		System.out.println("addReviewd worked");
 	}
 	
 	public void showReviews() {
@@ -35,6 +36,7 @@ abstract public class Content {
 		}
 	}
 	
+		
 	public double getPrice() {
 		return price;
 		}
