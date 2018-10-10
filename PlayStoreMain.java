@@ -69,8 +69,10 @@ public class PlayStoreMain {
                 
                 
                 // Student to do: call a method to show all games
-                
+                System.out.println(1);
                 store.showReadingOfGenre("Novel");
+                
+                System.out.println(2);
                 u2.showContentBought();
                 
                 Comment comment1 = new Comment(u1, "This is a fantastic game!");
@@ -82,9 +84,22 @@ public class PlayStoreMain {
                 Comment reply2 = new Comment(u1, "Why not??");
                 reply1.addReply(reply2);
                 
-                Comment comment2 = new Comment(u3, "The game crashes frequently");
-                g1.addReview(comment1);
                 
+                Comment comment2 = new Comment(u3, "The game crashes frequently");
+                g1.addReview(comment2);
+                
+                System.out.println(3);
+                //show how many comments are in a thread for each comment post
+                System.out.println(comment1.getReplies().values());
+                
+                System.out.println(4);
+                //Show how many replies there are for each comment made for g1
+                for (int i=0; i < g1.Reviews.size(); i++) {
+                	System.out.println(g1.Reviews.get(i).getReplies());
+                }
+                
+                System.out.println(5);
+                //show all posts with their whole thread - NOT WORKING!! 
                 g1.showReviews();
         }
 }

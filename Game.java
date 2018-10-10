@@ -9,16 +9,17 @@ public class Game extends Content{
 		super(ID, appName, price);
 		this.isMultiplayer = isMultiplayer;
 		this.os = os;
-		Reviews = null;
+		//Reviews = null;
+		Reviews = new ArrayList<Comment>();
 		downloads = 0;
 	}
 	
-	public Game(String ID, String appName, ArrayList<Comment> Reviews, int downloads, double price, boolean isMultiplayer, OS os) {
+/*	public Game(String ID, String appName, ArrayList<Comment> Reviews, int downloads, double price, boolean isMultiplayer, OS os) {
 		super(ID, appName, Reviews, downloads, price);
 		this.isMultiplayer = isMultiplayer;
 		this.os = os;
 	}
-
+*/
 	public void getNoPlayers() {
 		if (isMultiplayer) {
 			System.out.println("This game is a multi-player");
