@@ -21,13 +21,14 @@ public class Comment
 		//this.text = comt.text;
 		this.replies.put(comt.user, comt);
 		}
-	
+  
+  
 	public User getU()
 		{
 		return user;
 		}
 	
-	public String getUser()
+  public String getUser()
 		{
 		return user.getUserID();
 		}

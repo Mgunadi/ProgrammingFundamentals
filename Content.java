@@ -25,12 +25,13 @@ abstract public class Content {
 		this.price = price;
 		}
 	
-	
+  
 	public void addReview(Comment com)
 		{
 		Reviews.add(new Comment(com.getU(), com.getText()));
 		//Reviews.get(Reviews.indexOf(com)).addReply(com);
 		}
+
 	
 	public void showReviews()
 		{
