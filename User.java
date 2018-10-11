@@ -86,6 +86,10 @@ public class User {
 	public String getUserID() {
 		return UserID;
 		}
+	
+	public String getUserName() {
+		return UserName;
+	}
 
 	
 	

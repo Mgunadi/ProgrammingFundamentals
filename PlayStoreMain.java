@@ -13,7 +13,7 @@ public class PlayStoreMain {
                 String[] authors3 = {"Thomas H. Cormen", "Charles E. Leiserson", "Ronald L. Rivest", "Clifford Stein"};
                 Book b3 = new Book ("r3", "Introduction to algorithms", 100, "MIT Press", "Computer Science", 1312, authors3);
                 
-                Magazine m1 = new Magazine("r3", "Forbes", 8, "Forbes Media", "Business", 50, "World's richest under 30");
+                Magazine m1 = new Magazine("m1", "Forbes", 8, "Forbes Media", "Business", 50, "World's richest under 30");
                 
                 
                 store.add(b1.getID(),b1);
@@ -91,6 +91,7 @@ public class PlayStoreMain {
                 System.out.println(3);
                 //show how many comments are in a thread for each comment post
                 System.out.println(comment1.getReplies().values());
+                System.out.println(comment1.getReplies().keySet());
                 
                 System.out.println(4);
                 //Show how many replies there are for each comment made for g1
