@@ -15,57 +15,53 @@ abstract public class Content {
 		this.price = price;
 	}
 */
-	public Content(String ID, String appName, double price)
-		{
+	public Content(String ID, String appName, double price){
 		this.ID = ID;
 		this.appName = appName;
 		Reviews = new ArrayList<Comment>();
 		//Reviews = null;
 		downloads = 0;
 		this.price = price;
-		}
+	}
 	
   
-	public void addReview(Comment com)
-		{
+	public void addReview(Comment com) {
 		Reviews.add(new Comment(com.getU(), com.getText()));
 		//Reviews.get(Reviews.indexOf(com)).addReply(com);
-		}
+	}
 
 	
-	public void showReviews()
-		{
-		for (int i = 0 ; i <Reviews.size(); i++)
-			{
-			for (User replyKey : Reviews.get(i).getReplies().keySet())
-				{
+	/*public void showReviews() {
+		for (int i = 0 ; i <Reviews.size(); i++) {
+			for (User replyKey : Reviews.get(i).getReplies().keySet()) {
 				//System.out.println(Reviews.get(i).getReplies().values());
-				Reviews.get(i).getReplies().get(replyKey).getThread();
-				}
+				//Reviews.get(i).getReplies().get(replyKey).getThread();
 			}
 		}
+	}*/
 	
-	public double getPrice()
-		{
+	
+	public double getPrice() {
 		return price;
-		}
+	}
 
-	public String getID()
-		{
+	
+	public String getID() {
 		return ID;
-		}
+	}
 	
-	public String getName()
-		{
+	
+	public String getName() {
 		return appName;
-		}
+	}
 	
-	public int addDownload()
-		{
+	
+	public int addDownload() {
 		downloads += 1;
 		return downloads;
-		}
+	}
 
+	
 	public abstract void showContent(PlayStore store);
 	
 }

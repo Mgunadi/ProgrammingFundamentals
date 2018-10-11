@@ -22,6 +22,7 @@ public class Test {
           //create Users
           User u1 = new User("u1", "John Doe", "0412000", 2000, androidV4);
           User u2 = new User("u2", "Jane Doe", "0412001", 120, androidV4);
+          User u3 = new User("u3", "Verity", "0412002", 50000, androidV4);
           
           //Create Game
           Game g1 = new Game("g1", "Pokemon", 5, false, androidV4);
@@ -37,8 +38,11 @@ public class Test {
           //Create 2nd comment and add it as a reply to comment1
           Comment reply1 = new Comment(u2, "I never liked this game!");
           comment1.addReply(reply1);
-          Comment reply2 = new Comment(u1, "Why not?");
+          //reply1.getThread();
+          Comment reply2 = new Comment(u3, "Why not?");
           comment1.addReply(reply2);
+          System.out.println("before get thread");
+          comment1.getThread();
           
           //Print size and thread of comment1
           //reply1.getThread();
