@@ -1,25 +1,41 @@
 import java.util.*;
+
 public class Comment
 	{
 
 	private User user;
 	private String text;
-	public HashMap<User, Comment> replies;
+	private String Ustring;
+	private String Utext;
+	private String[] utext;
+	public ArrayList<String[]> replies = new ArrayList<String[]>();
 	
 	public Comment(User user, String text)
 		{
 		this.user = user;
 		this.text = text;
-		replies = new HashMap<User, Comment>();
-		replies.put(user, this);
+		replies = new ArrayList<String[]>();
+		String Ustring = user.getUserID();
+		String Utext = text;
+		String[] utext = {Ustring, text};
+		replies.add(utext);
+		
+		//replies.put(user, this); hashmap equivalent
 		}
 	
 	
 	public void addReply(Comment comt)
 		{
+		String Ustring = user.getUserID();
+		String Utext = comt.getText();
+		String[] utext = {Ustring, Utext};
+		replies.add(utext);
+		
 		//this.user = comt.user;
 		//this.text = comt.text;
-		this.replies.put(comt.user, comt);
+		//this.replies.put(comt.user, comt);  hashmap equivalent
+		
+		
 		}
 	
 	public User getU()
@@ -39,17 +55,17 @@ public class Comment
 	
 	public void getThread()
 		{
-		for(User currentKey : replies.keySet())
+		for(String[] Utextarray : replies)
 			{
 			if (replies.size() > 0)
 				{
-				System.out.println(replies.get(currentKey).getUser() + " " + replies.get(currentKey).getText());
+				System.out.println(Utextarray[0] + Utextarray[1]);
 				}
 			}
 		}
 	
-	public HashMap<User, Comment> getReplies()
+	public ArrayList<String[]> getReplies()
 		{
-		return this.replies;
+		return replies;
 		}
 }

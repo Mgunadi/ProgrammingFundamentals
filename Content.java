@@ -20,7 +20,6 @@ abstract public class Content {
 		this.ID = ID;
 		this.appName = appName;
 		Reviews = new ArrayList<Comment>();
-		//Reviews = null;
 		downloads = 0;
 		this.price = price;
 		}
@@ -35,14 +34,13 @@ abstract public class Content {
 	public void showReviews()
 		{
 		for (int i = 0 ; i <Reviews.size(); i++)
+		{
+			for (int j = 0; j <=1; j++)
 			{
-			for (User replyKey : Reviews.get(i).getReplies().keySet())
-				{
-				//System.out.println(Reviews.get(i).getReplies().values());
-				Reviews.get(i).getReplies().get(replyKey).getThread();
-				}
+				System.out.println(Reviews.get(i).getReplies().get(0)[j]);
 			}
 		}
+	}
 	
 	public double getPrice()
 		{

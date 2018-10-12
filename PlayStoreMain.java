@@ -90,13 +90,13 @@ public class PlayStoreMain {
                 
                 System.out.println(3);
                 //show how many comments are in a thread for each comment post
-                System.out.println(comment1.getReplies().values());
-                System.out.println(comment1.getReplies().keySet());
+                //System.out.println(comment1.getReplies().values());
+                //System.out.println(comment1.getReplies().keySet());
                 
                 System.out.println(4);
                 //Show how many replies there are for each comment made for g1
                 for (int i=0; i < g1.Reviews.size(); i++) {
-                	System.out.println(g1.Reviews.get(i).getReplies());
+                	System.out.println(g1.Reviews.get(i));
                 }
                 
                 System.out.println(5);
