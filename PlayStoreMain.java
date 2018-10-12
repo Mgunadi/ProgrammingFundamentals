@@ -89,16 +89,17 @@ public class PlayStoreMain {
                 g1.addReview(comment2);
                 
                 System.out.println(3);
-                //show how many comments are in a thread for each comment post
-                //System.out.println(comment1.getReplies().values());
-                //System.out.println(comment1.getReplies().keySet());
-                
+   	
+                System.out.println(comment1.getReplies().get(1)[0]);
+                System.out.println(reply1.getReplies().get(1)[0]);
+                System.out.println(g1.Reviews.get(0).getReplies().size());
                 System.out.println(4);
+                
                 //Show how many replies there are for each comment made for g1
                 for (int i=0; i < g1.Reviews.size(); i++) {
                 	System.out.println(g1.Reviews.get(i));
-                }
-                
+                	}
+
                 System.out.println(5);
                 //show all posts with their whole thread - NOT WORKING!! 
                 g1.showReviews();
