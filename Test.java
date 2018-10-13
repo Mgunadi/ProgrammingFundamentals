@@ -12,12 +12,10 @@ public class Test {
           Magazine m1 = new Magazine("r3", "Forbes", 8, "Forbes Media", "Business", 50, "World's richest under 30");
           
           // Get genre of book
-          System.out.println("Genre is" + b1.getGenre());
+          //System.out.println("Genre is" + b1.getGenre());
           
-        
           // create OS
-          OS androidV4 = new OS("Android", 4);
-          
+          OS androidV4 = new OS("Android", 4);    
  
           //create Users
           User u1 = new User("u1", "John Doe", "0412000", 2000, androidV4);
@@ -26,21 +24,25 @@ public class Test {
           //Create Game
           Game g1 = new Game("g1", "Pokemon", 5, false, androidV4);
           //print name of game
-          System.out.println(g1.getName());
+          //System.out.println(g1.getName());
           
           
           //Create comment
           Comment comment1 = new Comment(u1, "This is a fantastic game!");
-          //print comment
-          //comment1.getThread();
-        
-          //Create 2nd comment and add it as a reply to comment1
+          g1.addReview(comment1);
+
           Comment reply1 = new Comment(u2, "I never liked this game!");
           comment1.addReply(reply1);
           Comment reply2 = new Comment(u1, "Why not?");
           comment1.addReply(reply2);
+
+          comment1.getThread();
+          System.out.println("done");
           
-          //Print size and thread of comment1
+          
+          
+          
+          /*Print size and thread of comment1
           //reply1.getThread();
           //System.out.println(comment1.replies.values());
           //comment1.getThread();
@@ -59,7 +61,7 @@ public class Test {
           
           //Test showReadingOfGenre()
           store.showReadingOfGenre("Novel");
-          store.showReadingOfGenre("Business");
+          store.showReadingOfGenre("Business");*/
 	}
 
 }

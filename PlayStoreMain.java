@@ -51,7 +51,7 @@ public class PlayStoreMain {
                                 
                                 
                 // Simulate transactions
-                u1.buyContent(b1);
+          /*      u1.buyContent(b1);
                 u1.buyContent(b3);
                 u1.buyContent(m1);
 
@@ -69,12 +69,10 @@ public class PlayStoreMain {
                 
                 
                 // Student to do: call a method to show all games
-                System.out.println(1);
                 store.showReadingOfGenre("Novel");
                 
-                System.out.println(2);
                 u2.showContentBought();
-                
+            */    
                 Comment comment1 = new Comment(u1, "This is a fantastic game!");
                 g1.addReview(comment1);
                 
@@ -84,24 +82,17 @@ public class PlayStoreMain {
                 Comment reply2 = new Comment(u1, "Why not??");
                 reply1.addReply(reply2);
                 
-                
                 Comment comment2 = new Comment(u3, "The game crashes frequently");
-                g1.addReview(comment2);
+                //g1.addReview(comment2);
                 
-                System.out.println(3);
-   	
-                System.out.println(comment1.getReplies().get(1)[0]);
-                System.out.println(reply1.getReplies().get(1)[0]);
-                System.out.println(g1.Reviews.get(0).getReplies().size());
-                System.out.println(4);
-                
-                //Show how many replies there are for each comment made for g1
-                for (int i=0; i < g1.Reviews.size(); i++) {
-                	System.out.println(g1.Reviews.get(i));
-                	}
+                //Line below not working
+                //System.out.println(comment1.getReplies().get(1)[0] + ": " + comment1.getReplies().get(1)[1]);
 
                 System.out.println(5);
                 //show all posts with their whole thread - NOT WORKING!! 
-                g1.showReviews();
+                //g1.showReviews();
+                
+                comment1.getThread();
         }
+        
 }
