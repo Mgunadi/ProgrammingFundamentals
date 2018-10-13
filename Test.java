@@ -36,7 +36,7 @@ public class Test {
           Comment reply2 = new Comment(u1, "Why not?");
           comment1.addReply(reply2);
 
-          comment1.getThread();
+          //comment1.getThread();
           System.out.println("done");
           
           

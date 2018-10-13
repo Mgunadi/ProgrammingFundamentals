@@ -83,7 +83,7 @@ public class PlayStoreMain {
                 reply1.addReply(reply2);
                 
                 Comment comment2 = new Comment(u3, "The game crashes frequently");
-                //g1.addReview(comment2);
+                g1.addReview(comment2);
                 
                 //Line below not working
                 //System.out.println(comment1.getReplies().get(1)[0] + ": " + comment1.getReplies().get(1)[1]);
@@ -92,7 +92,20 @@ public class PlayStoreMain {
                 //show all posts with their whole thread - NOT WORKING!! 
                 //g1.showReviews();
                 
+                System.out.println("before thread");
                 comment1.getThread();
+                System.out.println("after thread, before reply");
+                comment1.getReplies();
+                System.out.println("verity rox");
+                System.out.println(comment1.getReplies().get(0).getText());
+                
+                System.out.println("show reviews");
+                g1.showReviews();
+                
+                
+                /*System.out.println(comment1.getText());
+                System.out.println(comment1.getReplies().get(0));
+                System.out.println(comment1.getReplies());*/
         }
         
 }
