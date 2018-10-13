@@ -21,41 +21,17 @@ abstract public class Content {
 		Reviews.add(new Comment(com.getU(), com.getText()));
 	}
 	
-	/*public void showReviews() {
-		for (int i = 0 ; i <Reviews.size(); i++) {
-			if (i < Reviews.size()-1) {
-				System.out.print(Reviews.get(i).getReplies().get(0)[0] + ": " +
-						Reviews.get(i).getReplies().get(0)[1] +
-						"\n" + "\t");
-			} else {
-			System.out.print(Reviews.get(i).getReplies().get(0)[0] + ": ");
-			System.out.println(Reviews.get(i).getReplies().get(0)[1]);
-			System.out.println("TESTING BEFORE LOOP");
-			}
-		}
-	}*/
-
 	
 	public void showReviews() {
-	for (int i = 0 ; i <Reviews.size(); i++) {
-		if (i < Reviews.size()) {
-			System.out.println("ET");
-			System.out.println(Reviews.get(i).getText());
-			System.out.println("GJKHK");
-		} else {
-			System.out.println("TEST");
+		for (int i = 0 ; i <Reviews.size(); i++) {
+			if (i < Reviews.size()) {
+				System.out.println(Reviews.get(i).getUser() + 
+						": " + Reviews.get(i).getText());
+			} else {
+				System.out.println("TEST");
+			}
 		}
-			
-			//System.out.print(Reviews.get(i).getReplies().get(0)[0] + ": " +
-				//	Reviews.get(i).getReplies().get(0)[1] +
-					//"\n" + "\t");
-		/*} else {
-		System.out.print(Reviews.get(i).getReplies().get(0)[0] + ": ");
-		System.out.println(Reviews.get(i).getReplies().get(0)[1]);
-		System.out.println("TESTING BEFORE LOOP");
-		}*/
 	}
-}
 	
 	
 	public double getPrice() {

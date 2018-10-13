@@ -29,7 +29,7 @@ public class Comment {
 	
 	
 	public String getUser() {
-		return user.getUserID();
+		return user.getUserName();
 	}
 	
 	
