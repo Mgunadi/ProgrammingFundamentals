@@ -103,5 +103,7 @@ public class PlayStoreMain {
                 System.out.println(5);
                 //show all posts with their whole thread - NOT WORKING!! 
                 g1.showReviews();
+                
+                comment1.getThread();
         }
 }

@@ -59,7 +59,7 @@ public class Comment
 			{
 			if (replies.size() > 0)
 				{
-				System.out.println(Utextarray[0] + Utextarray[1]);
+				System.out.println(Utextarray[0] + ": " + Utextarray[1]);
 				}
 			}
 		}
