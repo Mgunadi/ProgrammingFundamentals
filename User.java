@@ -3,7 +3,7 @@ import java.util.Objects;
 
 public class User {
 	
-	private String UserID, UserName, phoneNo;
+	private String userID, userName, phoneNo;
 	private double balance;
 	private OS os;
 	
@@ -12,9 +12,9 @@ public class User {
 	boolean hasEnough;
 	double price;
 	
-	public User(String ID, String name, String phone, double balance, OS os) {
-		UserID = ID;
-		UserName = name;
+	public User(String id, String name, String phone, double balance, OS os) {
+		userID = id;
+		userName = name;
 		phoneNo = phone;
 		this.balance = balance;
 		this.os = os;
@@ -94,11 +94,11 @@ public class User {
 	
 	
 	public String getUserID() {
-		return UserID;
+		return userID;
 	}
 	
 	public String getUserName() {
-		return UserName;
+		return userName;
 	}
 	
 }

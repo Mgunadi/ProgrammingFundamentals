@@ -47,4 +47,13 @@ public class PlayStore {
 		}	
 	}
 	
+	
+	/*public void showContentbyClass(Content content) {
+		if (content instanceof Game) {
+			
+			
+			checkCompatibility((Game)content);
+		if 
+	}*/
+	
 }

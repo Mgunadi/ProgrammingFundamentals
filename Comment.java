@@ -11,11 +11,12 @@ public class Comment {
 	public Comment(User user, String text) {
 		this.user = user;
 		this.text = text;
-		if (!replies.contains(this)) {
+		/*if (!replies.contains(this)) {
 			replies.add(this);
+			System.out.println(text);
 		}
 			counter = 1;
-	}
+	*/}
 	
 	
 	public void addReply(Comment comt) {
@@ -24,7 +25,8 @@ public class Comment {
 		replies.add(comt);
 	}
 	
-
+	
+	// get the user name
 	public User getU() {
 		return user;
 	}
@@ -34,15 +36,17 @@ public class Comment {
 		return user.getUserID();
 	}
 	
-	
+	//get the comment text 
 	public String getText() {
 		return text;
 	}
 	
 	
+	//get the string of replies
 	public void getThread() {
 		for(Comment comm : replies) {
 			System.out.println(comm.getUser() + ": " + comm.getText());
+			System.out.println("HELP");
 		}
 	}
 

@@ -69,10 +69,10 @@ public class PlayStoreMain {
                 
                 
                 // Showing all games
-                System.out.println(1);
+                //game.showContent(store);
+                
                 store.showReadingOfGenre("Novel");
                 
-                System.out.println(2);
                 u2.showContentBought();
                 
                 Comment comment1 = new Comment(u1, "This is a fantastic game!");
@@ -84,22 +84,17 @@ public class PlayStoreMain {
                 Comment reply2 = new Comment(u1, "Why not??");
                 reply1.addReply(reply2);
                 
-                
                 Comment comment2 = new Comment(u3, "The game crashes frequently");
                 g1.addReview(comment2);
                 
-                System.out.println(3);
-   	
-                System.out.println(g1.Reviews.get(0).getReplies().size());
-                System.out.println(4);
-                
+                System.out.println(g1.Reviews.get(0).getReplies().size() + " reviews for this object");
                 
                 //Show how many replies there are for each comment made for g1
-                for (int i=0; i < g1.Reviews.size(); i++) {
+          /*      for (int i=0; i < g1.Reviews.size(); i++) {
                 	System.out.println(g1.Reviews.get(i));
                 	}
-
-                System.out.println(5); 
+*/
+                System.out.println("before show reviews"); 
                 g1.showReviews();
                 
         }
