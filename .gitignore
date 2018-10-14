@@ -11,3 +11,5 @@
 /Test.class
 /BalanceException.class
 /Replies.class
+/OSException.class
+/VersionException.class

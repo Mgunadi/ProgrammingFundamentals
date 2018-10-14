@@ -89,14 +89,7 @@ public class PlayStoreMain {
                 
                 System.out.println(g1.Reviews.get(0).getReplies().size() + " reviews for this object");
                 
-                //Show how many replies there are for each comment made for g1
-          /*      for (int i=0; i < g1.Reviews.size(); i++) {
-                	System.out.println(g1.Reviews.get(i));
-                	}
-*/
-                System.out.println("before show reviews"); 
                 g1.showReviews();
-                
         }
 
 }

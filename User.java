@@ -64,46 +64,49 @@ public class User {
 			}
 		}
 	
-	public void buyContent(Content content)
-		{
-		if (content instanceof Game)
-			{
+	
+	public void buyContent(Content content) {
+		if (content instanceof Game) {
 			checkCompatibility((Game)content);
-			}
+		}
+		
 		price = content.getPrice();
 		System.out.println("The price is: $" + price);
-
-		if (isPremium == true)
-			{
+		
+		//check to see if user is premium and therefore subject to a reduced price
+		if (isPremium == true) {
 			System.out.println("You are a premium member so you get a discount");
 			price = content.getPrice() - (content.getPrice() * 0.1);
 			System.out.println("The price you get to pay is $" + price);
-			}
-		try
-			{
+		}
+		
+		try {
 			if (balance < price) {
 				throw new BalanceException(balance, price);
 			}
+			
 			balance = balance - price;
 			content.addDownload();
 			Library.add(content);
 			System.out.println(UserName + ", you have successfully bought " + content.getName());
 			System.out.println("Your balance is now: $" + balance);
-			}
-		catch (BalanceException e)
-			{
-			System.out.println(e);
-			}		
 		}
+		
+		catch (BalanceException e) {
+			System.out.println(e);
+		}		
+	}
 	
-	public void showContentBought()
-		{
-		for (int i = 0; i < Library.size(); i++)
+	
+	public void showContentBought() {
+		for (int i = 0; i < Library.size(); i++) {
 			System.out.println(Library.get(i).getName());
 		}
+	}
 	
-	public String getUserID()
-		{
+	
+	public String getUserID() {
 		return UserID;
-		}
+	}
+	
 }
