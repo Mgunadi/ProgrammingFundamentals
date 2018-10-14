@@ -93,7 +93,7 @@ public class PlayStoreMain {
                 //g1.showReviews();
                 
                 System.out.println("before thread");
-                comment1.getThread();
+                //comment1.getThread();
                 System.out.println("after thread, before reply");
                 comment1.getReplies();
                 System.out.println("verity rox");

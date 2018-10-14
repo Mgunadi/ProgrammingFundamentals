@@ -6,12 +6,15 @@ public class Comment {
 	private String text;
 	//private String userString;
 	//private String userText;
+	public static int counter = 0;
 	private ArrayList<Comment> replies = new ArrayList<>();
 
 	
 	public Comment(User user, String text) {
 		this.user = user;
 		this.text = text;
+		replies.add(this);
+		counter += 1;
 	}
 	
 	
@@ -19,6 +22,7 @@ public class Comment {
 		System.out.println(comt.getText());
 		System.out.println(comt);
 		replies.add(comt);
+		counter += 1;
 		System.out.println("Added a comment");
 	}
 
@@ -38,13 +42,12 @@ public class Comment {
 	}
 	
 	
-	public void getThread() {
-		for(Comment Replies : replies) {
-			if (replies.size() > 0) {
-				System.out.println(replies.size());
-				System.out.println(replies.get(0).getText());
-			}
-		}
+	public Comment getThread(int n) {
+		if (n ==1) 
+			return replies.get(0);
+		else 
+			return replies.get(0).getReplies().get(0).getThread(0);
+	
 	}
 	
 	

@@ -25,8 +25,7 @@ abstract public class Content {
 	public void showReviews() {
 		for (int i = 0 ; i <Reviews.size(); i++) {
 			if (i < Reviews.size()) {
-				System.out.println(Reviews.get(i).getUser() + 
-						": " + Reviews.get(i).getText());
+				System.out.println(Reviews.get(i).getThread(Reviews.get(i).counter).getText());
 			} else {
 				System.out.println("TEST");
 			}
