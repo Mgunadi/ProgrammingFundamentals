@@ -64,11 +64,11 @@ public class PlayStoreMain {
                 u2.buyContent(g2);
                 u2.buyContent(g1);
 
-
+                
                 store.showContent();
                 
                 
-                // Student to do: call a method to show all games
+                // Showing all games
                 System.out.println(1);
                 store.showReadingOfGenre("Novel");
                 
@@ -99,9 +99,9 @@ public class PlayStoreMain {
                 	System.out.println(g1.Reviews.get(i));
                 	}
 
-                System.out.println(5);
-                //show all posts with their whole thread - NOT WORKING!! 
+                System.out.println(5); 
                 g1.showReviews();
                 
         }
+
 }

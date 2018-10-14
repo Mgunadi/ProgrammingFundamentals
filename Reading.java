@@ -10,21 +10,13 @@ abstract public class Reading extends Content{
 		this.pages = pages;
 		this.genre = genre;
 		this.publisher = publisher;
-		//Reviews = null;
 		Reviews = new ArrayList<Comment>();
 		downloads = 0;
 	}
 
-	/* public Reading(String ID, String appName, ArrayList<Comment> Reviews, int downloads, double price, String genre, String publisher, int pages) {
-		super(ID, appName, Reviews, downloads, price);
-		this.pages = pages;
-		this.genre = genre;
-		this.publisher = publisher;
-			
-	}
-	 */
+
 	public String getGenre() {
-		return genre;
-		
+		return genre;	
 	}
+	
 }
