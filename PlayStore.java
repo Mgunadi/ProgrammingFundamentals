@@ -24,7 +24,7 @@ public class PlayStore {
 		userList.add(user);
 	}
 	
-	
+	//Uses subclass casting to get the appropriate subclass of an input genre. Only books and magazine have genre, so cast for Book or Magazine only.
 	public void showReadingOfGenre(String genre) {
 		for(String currentKey : library.keySet()) {
 			if (library.get(currentKey) instanceof Book) {
@@ -39,7 +39,7 @@ public class PlayStore {
 		}
 	}
 	
-	
+	//Iterate through library of store contents to show items in the store.
 	public void showContent() {
 		System.out.println("This collection contains: ");
 		for (String currentKey : library.keySet()) {
@@ -47,13 +47,13 @@ public class PlayStore {
 		}	
 	}
 	
-	
-	/*public void showContentbyClass(Content content) {
-		if (content instanceof Game) {
-			
-			
-			checkCompatibility((Game)content);
-		if 
-	}*/
-	
+	//Show games available by checking if content in store is a game using instanceof
+	public void showGameContent() {
+		System.out.println("Now showing collection of games:");
+		for (String currentKey : library.keySet()) {
+			if (library.get(currentKey) instanceof Game) {
+				System.out.println(library.get(currentKey).getName());
+			}
+		}
+	}
 }

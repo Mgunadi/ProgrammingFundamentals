@@ -22,7 +22,7 @@ public class Game extends Content {
 		}
 	}
 	
-	
+	//Check if content in the library is a game. If so, print game name
 	public void showContent(PlayStore store) {
 		for(String currentKey : store.library.keySet()) {
 			if (store.library.get(currentKey) instanceof Game) {

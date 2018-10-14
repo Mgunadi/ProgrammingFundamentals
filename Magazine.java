@@ -8,7 +8,6 @@ public class Magazine extends Reading {
 	public Magazine(String ID, String appName, double price, String publisher, String genre,  int pages, String magName) {
 		super(ID, appName, price, genre, publisher, pages);
 		this.magName = magName;
-		//Reviews = null;
 		Reviews = new ArrayList<Comment>();
 		downloads = 0;
 	}

@@ -20,7 +20,7 @@ public class User {
 		this.os = os;
 	}
 	
-	
+	// checks if user has enough balance (100) to become a premium. If not able to, will give a warning message.
 	public void becomePremium() {
 		try {	
 			if (balance < 100) {
@@ -73,7 +73,7 @@ public class User {
 		price = content.getPrice();
 		System.out.println("The price is: $" + price);
 		
-		//check to see if user is premium and therefore subject to a reduced price
+		//check to see if user is premium and therefore eligible for a reduced price
 		if (isPremium == true) {
 			System.out.println("You are a premium member so you get a discount");
 			price = content.getPrice() - (content.getPrice() * 0.1);

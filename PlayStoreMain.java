@@ -67,9 +67,7 @@ public class PlayStoreMain {
                 
                 store.showContent();
                 
-                
-                // Showing all games
-                //game.showContent(store);
+                store.showGameContent();
                 
                 store.showReadingOfGenre("Novel");
                 
