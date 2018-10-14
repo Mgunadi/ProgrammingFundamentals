@@ -35,9 +35,10 @@ abstract public class Content {
 		{
 		for (int i = 0 ; i <Reviews.size(); i++)
 		{
-			for (int j = 0; j <=1; j++)
+			for (int j = 0; j < Reviews.get(i).counter; j++)
 			{
-				System.out.println(Reviews.get(i).getReplies().get(0)[j]);
+				Reviews.get(i).getReplies().get(j).getThread();
+				//.getReplies())//.get(j).getThread());
 			}
 		}
 	}

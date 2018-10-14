@@ -90,10 +90,9 @@ public class PlayStoreMain {
                 
                 System.out.println(3);
    	
-                System.out.println(comment1.getReplies().get(1)[0]);
-                System.out.println(reply1.getReplies().get(1)[0]);
                 System.out.println(g1.Reviews.get(0).getReplies().size());
                 System.out.println(4);
+                
                 
                 //Show how many replies there are for each comment made for g1
                 for (int i=0; i < g1.Reviews.size(); i++) {
@@ -104,6 +103,5 @@ public class PlayStoreMain {
                 //show all posts with their whole thread - NOT WORKING!! 
                 g1.showReviews();
                 
-                comment1.getThread();
         }
 }
